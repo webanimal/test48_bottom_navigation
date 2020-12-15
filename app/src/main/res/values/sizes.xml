@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Movies List -->
+    <dimen name="movies_list_title_text_size">16sp</dimen>
+    <dimen name="movies_list_item_title_size">14sp</dimen>
+    <dimen name="movies_list_item_overview_size">12sp</dimen>
+    <!-- Movies List -->
+
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layMoviesListItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/space_4dp"
+    android:padding="@dimen/space_8dp"
+    android:background="@drawable/shape_rounded_stroke_rect_background_dark_blue"
+    tools:context=".MainActivity"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivMoviesListAvatar"
+        android:layout_width="@dimen/movies_list_item_avatar_space"
+        android:layout_height="@dimen/movies_list_item_avatar_space"
+        android:layout_marginStart="@dimen/space_8dp"
+        app:srcCompat="@drawable/ic_movie_download_placeholder"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvMoviesListFilmTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_8dp"
+        android:includeFontPadding="false"
+        android:gravity="center_vertical|start"
+        android:textStyle="bold"
+        android:textSize="@dimen/movies_list_item_title_size"
+        android:textColor="@color/colorLightOnDarkText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivMoviesListAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@tools:sample/cities"
+        />
+
+    <TextView
+        android:id="@+id/tvMoviesListFilmOverview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_8dp"
+        android:gravity="center_vertical|start"
+        android:textSize="@dimen/movies_list_item_overview_size"
+        android:textColor="@color/colorGrayText"
+        app:layout_constraintTop_toBottomOf="@+id/tvMoviesListFilmTitle"
+        app:layout_constraintStart_toEndOf="@+id/ivMoviesListAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="@tools:sample/full_names"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

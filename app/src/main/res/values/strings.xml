@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">BottomNavigation sample</string>
+
+    <!-- Menu Bottom navigation -->
+    <string name="menu_item_movies_list">Movies</string>
+    <string name="menu_item_more">More</string>
+    <!-- Menu Bottom navigation -->
+
+    <!-- Movies List -->
+    <string name="movies_list_title_text">Movies list</string>
+    <string name="movies_list_item_empty">There are no movies right now.</string>
+    <!-- Movies List -->
+
+</resources>

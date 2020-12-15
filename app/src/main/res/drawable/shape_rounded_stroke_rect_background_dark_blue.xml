@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle"
+    >
+
+    <corners android:radius="@dimen/movies_list_item_corners" />
+    <solid android:color="@color/colorDarkBlue" />
+    <stroke android:color="@color/colorGrayStroke" android:width="@dimen/movies_list_item_stroke_width" />
+
+</shape>
