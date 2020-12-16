@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDarkBlue"
+    tools:context=".MainActivity"
+    >
+
+    <LinearLayout
+        android:id="@+id/layMovieDetailsBack"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_16dp"
+        android:layout_marginStart="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_16dp"
+        android:paddingTop="@dimen/space_8dp"
+        android:paddingBottom="@dimen/space_8dp"
+        android:gravity="center_vertical|start"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/movie_details_back_icon_space"
+            app:tint="@color/colorPink"
+            app:srcCompat="@drawable/ic_chevron_left"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_16dp"
+            android:gravity="center_vertical|start"
+            android:textSize="@dimen/movie_details_back_text_size"
+            android:textColor="@color/colorPink"
+            android:text="@string/movie_details_back_text"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/space_8dp"
+        android:layout_marginBottom="@dimen/space_8dp"
+        android:layout_marginStart="@dimen/space_16dp"
+        android:layout_marginEnd="@dimen/space_16dp"
+        android:gravity="center_vertical|start"
+        android:textSize="@dimen/movie_details_text_size"
+        android:textColor="@color/colorLightOnDarkText"
+        android:text="@string/movie_details_text"
+        app:layout_constraintTop_toBottomOf="@+id/layMovieDetailsBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,7 +5,7 @@
     >
 
     <corners android:radius="@dimen/movies_list_item_corners" />
-    <solid android:color="@color/colorDarkBlue" />
+    <solid android:color="@color/colorDarkerBlue" />
     <stroke android:color="@color/colorGrayStroke" android:width="@dimen/movies_list_item_stroke_width" />
 
 </shape>

@@ -1,5 +1,6 @@
-package ru.webanimal.test48_bottom_navigation.features
+package ru.webanimal.test48_bottom_navigation.features.movieslist
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -24,23 +25,34 @@ class MoviesListFragment : Fragment() {
         coroutineScope = createCoroutineScope()
     }
     private var coroutineScope = createCoroutineScope()
-    
+    private var movieClickListener: MovieClickListener? = null
     private var recycler: RecyclerView? = null
-    private lateinit var httpClient: MoviesHttpClient
     private var movies: List<Movie> = arrayListOf()
+    
+    private lateinit var httpClient: MoviesHttpClient
+    
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+    
+        if (context is MovieClickListener) {
+            movieClickListener = context
+        }
+    
+        coroutineScope = createCoroutineScope()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
+        
         return inflater.inflate(R.layout.fragment_movies_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+    
         setupViews(view)
 
         httpClient = MoviesHttpClient()
@@ -49,6 +61,7 @@ class MoviesListFragment : Fragment() {
 
     override fun onDetach() {
         coroutineScope.cancel("It's time")
+        movieClickListener = null
         recycler = null
 
         super.onDetach()
@@ -67,11 +80,15 @@ class MoviesListFragment : Fragment() {
 
     private fun setupViews(parent: View) {
         recycler = parent.findViewById<RecyclerView>(R.id.rvMovies).apply {
-            adapter = MoviesAdapter()
+            adapter = MoviesAdapter(movieClickListener)
         }
     }
     
     private fun createCoroutineScope() = CoroutineScope(Job() + Dispatchers.Main)
+    
+    interface MovieClickListener {
+        fun onMovieSelected(id: Int)
+    }
 
     companion object {
         private val TAG = MoviesListFragment::class.java.simpleName

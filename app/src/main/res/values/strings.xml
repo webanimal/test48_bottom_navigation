@@ -12,4 +12,14 @@
     <string name="movies_list_item_empty">There are no movies right now.</string>
     <!-- Movies List -->
 
+    <!-- More -->
+    <string name="more_title_text">More</string>
+    <string name="more_text">Selected More screen</string>
+    <!-- More -->
+
+    <!-- Movie Details -->
+    <string name="movie_details_back_text">Back</string>
+    <string name="movie_details_text">Selected Movie details screen</string>
+    <!-- Movie Details -->
+
 </resources>

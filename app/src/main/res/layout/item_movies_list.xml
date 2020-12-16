@@ -8,7 +8,7 @@
     android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/space_4dp"
     android:padding="@dimen/space_8dp"
-    android:background="@drawable/shape_rounded_stroke_rect_background_dark_blue"
+    android:background="@drawable/shape_rounded_stroke_rect_background_darker_blue"
     tools:context=".MainActivity"
     >
 

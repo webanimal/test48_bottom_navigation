@@ -7,4 +7,14 @@
     <dimen name="movies_list_item_overview_size">12sp</dimen>
     <!-- Movies List -->
 
+    <!-- More -->
+    <dimen name="more_title_text_size">16sp</dimen>
+    <dimen name="more_text_size">14sp</dimen>
+    <!-- More -->
+
+    <!-- Movie Details -->
+    <dimen name="movie_details_back_text_size">16sp</dimen>
+    <dimen name="movie_details_text_size">14sp</dimen>
+    <!-- Movie Details -->
+
 </resources>
