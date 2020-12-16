@@ -104,10 +104,14 @@ class MainActivity : AppCompatActivity(),
 	private fun updateNavViewState(navViewState: NavigationViewStates) {
 		when (navViewState) {
 			NavigationViewStates.MOVIES_LIST -> {
+				setBadge(R.id.menu_item_movies_list, setVisible = true, counter = 33)
+				setBadge(R.id.menu_item_more, setVisible = true, counter = 0)
 				navigationView.menu.findItem(R.id.menu_item_movies_list)?.isChecked = true
 				showNavView()
 			}
 			NavigationViewStates.MORE -> {
+				setBadge(R.id.menu_item_more, setVisible = true, counter = 1100)
+				setBadge(R.id.menu_item_movies_list, setVisible = true, counter = 0)
 				navigationView.menu.findItem(R.id.menu_item_more)?.isChecked = true
 				showNavView()
 			}
@@ -115,6 +119,21 @@ class MainActivity : AppCompatActivity(),
 				hideNavView()
 			}
 		}
+	}
+	
+	private fun setBadge(menuItemId: Int, setVisible: Boolean, counter: Int) {
+		var badge = navigationView.getOrCreateBadge(menuItemId)
+		badge.isVisible = setVisible
+		if (counter > 0) {
+			badge.number = counter
+			
+		} else {
+			badge.clearNumber()
+		}
+	}
+	
+	private fun removeBadge(menuItemId: Int) {
+		navigationView.removeBadge(menuItemId)
 	}
 	
 	private fun showNavView() {
